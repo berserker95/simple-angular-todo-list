@@ -2,5 +2,6 @@
   <nb-layout-header fixed><h2>{{title}}</h2></nb-layout-header>
   <nb-layout-column>
   <app-todo (sendItems)="onSendItems($event)"></app-todo>
+  <app-todo-list *ngIf="items.length" [items]="items"></app-todo-list>
   </nb-layout-column>
 </nb-layout>

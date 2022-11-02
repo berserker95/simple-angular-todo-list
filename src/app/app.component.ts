@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'My Todo List';
+  public title = 'My Todo List';
+  public items: Array<string> = [];
 
   onSendItems(items: Array<string>) {
-    console.log(items);
+    this.items = items;
   }
 }

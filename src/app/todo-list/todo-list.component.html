@@ -1,0 +1,5 @@
+<div class="card-list d-flex flex-column">
+  <nb-card *ngFor="let item of items; index as i">
+    <nb-card-body class="d-flex flex-row justify-content-between align-items-center"><p id="item#{{i}}" class="font-weight-bold">{{item | capitalizeFirstLetter}}</p><p><nb-checkbox status="success" (checkedChange)="toggle($event, i)"></nb-checkbox ></p></nb-card-body>
+  </nb-card>
+</div>
