@@ -1,8 +1,8 @@
 <nb-card class="align-items-center">
   <nb-card-body>
     <nb-form-field>
-      <input id="todoItem" class="todo-input" type="text" shape="round" status="basic" fieldSize="medium" placeholder="Add Todo" [formControl]="item" (keydown.enter)="item.value && addNewItem()" required nbInput>
-      <button nbSuffix shape="round" nbButton status="success" [disabled]="!item.value" (click)="addNewItem()"><nb-icon icon="plus-outline"></nb-icon></button>
+      <input id="todoItem" class="todo-input" type="text" shape="round" status="basic" fieldSize="medium" placeholder="Add Todo" [formControl]="item" (keydown.enter)="item.value.trim() !== '' && addNewItem()" required nbInput>
+      <button nbSuffix shape="round" nbButton status="success" (click)="addNewItem()"><nb-icon icon="plus-outline"></nb-icon></button>
     </nb-form-field>
   </nb-card-body>
 </nb-card>

@@ -3,8 +3,14 @@
   margin-top: 4.5rem;
   nb-card {
     margin-bottom: 0 !important;
-    p {
+    [id^='item'] {
       font-size: 1.2rem;
+    }
+    .actions {
+      gap: 0.3rem;
+      .edit-button {
+        margin-top: -0.45rem;
+      }
     }
   }
 }
@@ -13,3 +19,4 @@
   text-decoration: line-through;
   color: var(--color-danger-500);
 }
+

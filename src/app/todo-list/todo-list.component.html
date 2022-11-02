@@ -1,5 +1,12 @@
 <div class="card-list d-flex flex-column">
   <nb-card *ngFor="let item of items; index as i">
-    <nb-card-body class="d-flex flex-row justify-content-between align-items-center"><p id="item#{{i}}" class="font-weight-bold">{{item | capitalizeFirstLetter}}</p><p><nb-checkbox status="success" (checkedChange)="toggle($event, i)"></nb-checkbox ></p></nb-card-body>
+    <nb-card-body class="d-flex flex-row justify-content-between align-items-center">
+      <p *ngIf="!isEdit || currentElementId != i" id="item#{{i}}" class="font-weight-bold">{{item | capitalizeFirstLetter}}</p>
+      <nb-form-field *ngIf="isEdit && currentElementId === i">
+        <input id="editItem" class="edit-input" type="text" status="basic" fieldSize="medium" placeholder="Edit todo" [formControl]="currentElement"(blur)="onBlur(i)" (keydown.enter)="saveNewItem(i)" required nbInput>
+      </nb-form-field>
+      <div class="actions d-flex align-items-center"><nb-checkbox status="success" (checkedChange)="toggle($event, i)"></nb-checkbox><button class="edit-button" status="warning" size="medium" (click)="editItem(i)" ghost nbSuffix nbButton>
+      <nb-icon icon="edit-outline"></nb-icon>
+    </button></div></nb-card-body>
   </nb-card>
 </div>
