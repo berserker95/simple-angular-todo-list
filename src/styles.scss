@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+.nb-theme-default  {
+ nb-layout-header nav {
+  background-color: var(--color-success-600);
+  justify-content: center !important;
+  h2 {
+     color: var(--color-basic-100);
+  }
+}
+}
+
+
+
+// TEXT ALIGNEMENT
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
+// FLEX
+
+.justify-content-center {
+  justify-content: center;
+}
+
+// ALIGN ITEMS
+
+.align-items-center {
+  align-items: center;
+}
+
+
+// COLORS
+
+:root {
+--color-success-100:#f0fff5;
+--color-success-200: #ccfce3;
+--color-success-300: #8cfac7;
+--color-success-400: #2ce69b;
+--color-success-500: #00d68f;
+--color-success-600: #00b887;
+--color-success-700: #00997a;
+--color-success-800: #007d6c;
+--color-success-900: #004a45;
+--color-basic-100:#ffffff;
+}
