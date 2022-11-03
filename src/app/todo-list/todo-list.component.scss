@@ -7,9 +7,15 @@
       font-size: 1.2rem;
     }
     .actions {
-      gap: 0.3rem;
+      gap: 0.5rem;
       .edit-button {
         margin-top: -0.45rem;
+      }
+      .delete-button {
+        margin-top: -0.3rem;
+      }
+      .edit-button, .delete-button {
+        padding: 0 !important;
       }
     }
   }
@@ -19,4 +25,34 @@
   text-decoration: line-through;
   color: var(--color-danger-500);
 }
+
+
+
+.delete-modal {
+  width: 25rem;
+  .dialog-title {
+    font-size: 1.5rem;
+  }
+  .dialog-body {
+    font-size: 1rem;
+  }
+  nb-card-body {
+    padding: 2rem 1.5rem;
+  }
+  nb-card-footer {
+    gap: 0.5rem;
+    button:first-child {
+      color: black;
+      background-color: transparent;
+      border: unset !important;
+      box-shadow: unset !important;
+      &:hover {
+        background-color: rgba(143,155,179,.08);
+      }
+    }
+  }
+}
+
+
+
 
