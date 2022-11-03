@@ -1,27 +1,31 @@
-# TodoList
+# TodoList 📝
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+A simple todo list whereby you could add, edit and delete your tasks in a simple and user-friendly way.
+Have fun!
 
-## Development server
+## Demo 👀
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+You can see a **running demo**
+[here](https://simple-angular-todo-list.vercel.app/)!
 
-## Code scaffolding
+## Technologies 🛠️
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* [Angular](https://angular.io/)
+* [Nebular](https://akveo.github.io/nebular/)
+* [Vercel](https://vercel.com/)
 
-## Build
+## Author 👤
+ **Giovanni Albano**
+* Website: https://www.linkedin.com/in/giovannialbano1995/
+* Github: [@berserker95](https://github.com/berserker95)
+* LinkedIn: [https:\/\/www.linkedin.com\/in\/giovannialbano1995\/](https://linkedin.com/in/giovannialbano1995\/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Show your support 🫶
 
-## Running unit tests
+Give a ⭐️ if this project helped you!
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## License 📜
 
-## Running end-to-end tests
+Copyright © 2022 [Giovanni Albano](https://github.com/berserker95).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project is [MIT](https://github.com/berserker95/simple-angular-todo-list/blob/master/LICENSE.md) licensed.
