@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
-import { NbCardModule, NbInputModule, NbFormFieldModule, NbIconModule, NbButtonModule, NbCheckboxModule } from '@nebular/theme';
-
 import { ReactiveFormsModule } from '@angular/forms';
+
+import {
+  NbCardModule,
+  NbInputModule,
+  NbFormFieldModule,
+  NbIconModule,
+  NbButtonModule,
+  NbCheckboxModule,
+  NbTooltipModule
+} from '@nebular/theme';
+
 import { CapitalizeFirstLetter } from '../shared/pipes/capitalize-first-letter.pipe';
 
 
@@ -18,6 +25,7 @@ import { CapitalizeFirstLetter } from '../shared/pipes/capitalize-first-letter.p
     NbIconModule,
     NbButtonModule,
     NbCheckboxModule,
+    NbTooltipModule,
     ReactiveFormsModule
   ],
   exports: [
@@ -29,6 +37,7 @@ import { CapitalizeFirstLetter } from '../shared/pipes/capitalize-first-letter.p
     NbIconModule,
     NbButtonModule,
     NbCheckboxModule,
+    NbTooltipModule,
     ReactiveFormsModule]
 })
 export class SharedModule { }

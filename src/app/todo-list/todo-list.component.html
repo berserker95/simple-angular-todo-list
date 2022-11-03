@@ -2,15 +2,15 @@
 <div class="card-list d-flex flex-column">
   <nb-card *ngFor="let item of items; index as i">
     <nb-card-body class="d-flex flex-row justify-content-between align-items-center">
-      <p *ngIf="!isEdit || currentElementId != i" id="item#{{i}}" class="font-weight-bold">{{item | capitalizeFirstLetter}}</p>
+      <p *ngIf="!isEdit || currentElementId != i" id="item#{{i}}" [ngClass]="{'strikethrough' : item.completed}" class="font-weight-bold">{{item.value | capitalizeFirstLetter}}</p>
       <nb-form-field *ngIf="isEdit && currentElementId === i">
         <input id="editItem" class="edit-input" type="text" status="basic" fieldSize="medium" placeholder="Edit todo" [formControl]="currentElement"(blur)="onBlur(i)" (keydown.enter)="saveNewItem(i)" required nbInput>
       </nb-form-field>
-      <div class="actions d-flex align-items-center"><nb-checkbox status="success" (checkedChange)="toggle($event, i)"></nb-checkbox>
-      <button class="edit-button" status="warning" size="large" (click)="editItem(i)" ghost nbSuffix nbButton>
+      <div class="actions d-flex align-items-center"><nb-checkbox [checked]="item.completed" [nbTooltip]="checkboxTooltipLabel" nbTooltipPlacement="top" status="success" (checkedChange)="toggle($event, i)"></nb-checkbox>
+      <button class="edit-button" status="warning" size="large" nbTooltip="Edit" nbTooltipPlacement="top" (click)="editItem(i)" ghost nbSuffix nbButton>
       <nb-icon icon="edit-outline"></nb-icon>
     </button>
-    <button class="delete-button" status="danger" size="large" (click)="openDialog(dialog)" ghost nbSuffix nbButton>
+    <button class="delete-button" status="danger" size="large" nbTooltip="Delete" nbTooltipPlacement="top" (click)="openDialog(dialog)" ghost nbSuffix nbButton>
       <nb-icon icon="trash-2-outline"></nb-icon>
     </button>
   </div>
