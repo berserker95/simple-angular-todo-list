@@ -1,0 +1,11 @@
+.copy-right-box {
+  gap: 0.5rem;
+  a {
+    text-decoration: none;
+  }
+}
+
+.copy-right-box, a {
+  color: var(--color-basic-100) !important;
+}
+

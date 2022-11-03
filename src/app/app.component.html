@@ -4,4 +4,8 @@
   <app-todo (sendItems)="onSendItems($event)"></app-todo>
   <app-todo-list *ngIf="items.length" [items]="items"></app-todo-list>
   </nb-layout-column>
+  <nb-layout-footer><div class="copy-right-box d-flex align-items-center flex-column">
+    <span class="copyright">© Copyright Giovanni Albano. All Rights Reserved</span>
+    <span class="author">Designed by <strong><a href="https://www.linkedin.com/in/giovannialbano1995/">Giovanni Albano</a></strong></span>
+  </div></nb-layout-footer>
 </nb-layout>

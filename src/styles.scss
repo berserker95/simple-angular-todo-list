@@ -11,6 +11,9 @@
     font-size: 2rem;
   }
 }
+ nb-layout-footer nav {
+  background-color: var(--color-success-600) !important;
+}
 }
 
 //UTILITIES
@@ -78,4 +81,5 @@
 --color-success-600: #00b887;
 --color-danger-500:	#ff3d71;
 --color-basic-100:#ffffff;
+--color-primary-500:#3366ff;
 }
