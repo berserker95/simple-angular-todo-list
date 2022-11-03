@@ -18,7 +18,7 @@ export class TodoComponent  {
 
 
   addNewItem() {
-   this.items.push(this.item.value);
+  !this.items.includes(this.item.value) && this.items.push(this.item.value);
    this.item.setValue('');
    this.sendItems.emit(this.items);
   }
