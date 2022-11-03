@@ -16,7 +16,7 @@ export class TodoListComponent {
   public checkboxTooltipLabel = 'To do';
   public currentElementId: number | null = null;
   public currentElement: FormControl = new FormControl('');
-  public dialogTitle = 'Delete Task';
+  public dialogTitle = 'Delete Tasks';
 
   constructor(private dialogService: NbDialogService) { }
 
@@ -47,13 +47,18 @@ export class TodoListComponent {
   }
 
   openDialog(dialog: TemplateRef<any>) {
-    this.dialogService.open(dialog, {context: `Are you sure you want to delete this item?` ,hasBackdrop: true })
+    this.dialogService.open(dialog, {context: `Are you sure you want to delete all items?` ,hasBackdrop: true })
   }
 
-  deleteItem(index: number, ref: any) {
+  deleteItem(index: number) {
     this.items.splice(index, 1);
     localStorage.setItem('todoList', JSON.stringify(this.items));
     !this.items.length && localStorage.clear();
+  }
+
+  deleteAllItems(ref: any) {
+    this.items.splice(0, this.items.length);
+    localStorage.clear();
     ref.close();
   }
 }
